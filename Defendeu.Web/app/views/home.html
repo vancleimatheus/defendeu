@@ -1,0 +1,97 @@
+﻿<style type="text/css">
+    .input {
+        margin-bottom: 5px;
+    }
+</style>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="page-header text-center">
+            <div class="row">
+                <div class="hidden-lg hidden-md hidden-sm col-xs-3">
+
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <img src="../../content/images/share-icon.png" class="img-responsive" />
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <h1>Bem vindo ao Defendeu!</h1>
+                </div>
+            </div>
+        </div>
+        <p>O Defendeu tem o objetivo de melhorar a saúde das pessoas. Com essa aplicação os profissionais da saúde podem interagir entre si e trocar informações. Além disso o Defendeu oferece gráficos de informações hostóricas, que podem ser usados para a avaliação dos pacientes.</p>
+    </div>
+</div>
+
+<div class="row">
+
+    <form name="loginhome" role="form" ng-controller="loginController" ng-submit="login()">
+
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+        <div class="col-md-4">
+            <h2 class="form-login-heading">Já está cadastrado?</h2>
+            <p class="text-primary">Entre com o seu usuário e senha.</p>
+            <input type="text" class="form-control input" placeholder="Usuário" data-ng-model="loginData.userName" required autofocus>
+            <input type="password" class="form-control" placeholder="Senha" data-ng-model="loginData.password" required>
+            <!--<div class="checkbox">
+                <label>
+                    <input type="checkbox" data-ng-model="loginData.useRefreshTokens"><strong> Matenha-me conectado</strong>
+                </label>
+            </div>-->
+            <br />
+            <button class="btn btn-md btn-info btn-block" type="submit">Entrar &raquo;</button>
+            <div data-ng-hide="message == ''" class="alert alert-danger">
+                {{message}}
+            </div>
+        </div>
+    </form>
+
+    <form name="logintest-home" role="form" ng-controller="loginController" ng-submit="loginAsTester()">
+        <div class="col-md-4">
+            <h2>Ainda não conhece o Defendeu?</h2>
+            <p class="text-primary">Você é nosso convidado a fazer um teste. O teste é simples e pode ser feito através do botão abaixo. Os dados apresentados nos testes não são reais.</p>
+            <div style="margin-top:30px">
+
+            </div>
+            <p><button class="btn btn-md btn-info btn-block" type="submit">Testar &raquo;</button></p>
+        </div>
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+    </form>
+</div>
+
+<hr />
+
+<div class="row">
+    <form name="contact-home" role="form" ng-controller="homeController" ng-submit="sendContact()">
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+        <div class="col-md-4">
+            <h2>Interessado em mais detalhes?</h2>
+            <p class="text-primary">Entre em contato conosco para conhecer melhor o Defendeu. Se preferir deixe seu e-mail ou telefone que entramos em contato com você.</p>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control input" placeholder="Nome" data-ng-model="contact.name" required>
+            <input type="tel" class="form-control input" placeholder="Telefone" data-ng-model="contact.phone" required>
+            <input type="email" class="form-control input" placeholder="E-mail" data-ng-model="contact.email" required>
+            <textarea class="form-control input" rows="4" placeholder="Mensagem" data-ng-model="contact.message" required></textarea>
+            <p><button class="btn btn-md btn-info btn-block input" type="submit">Enviar &raquo;</button></p>
+
+            <div style="width: 100%; text-align: center; margin-top: -10px; margin-bottom: 5px" ng-show="sendingContact">
+                <img src="../../content/images/ajax-loader.gif" />
+            </div>
+
+            <div data-ng-hide="contactMessage == ''" class="alert alert-success">
+                {{contactMessage}}
+            </div>
+        </div>
+        <div class="col-md-2">
+            &nbsp;
+        </div>
+    </form>
+
+</div>

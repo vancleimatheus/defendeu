@@ -1,0 +1,76 @@
+﻿<div ng-controller="patientFieldController" ng-init="load()">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="page-header">
+                <h4 class="title">Painel de Configurações</h4>
+                <br />
+                <span>Nessa área podemos customizar o sistema</span>
+            </div>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a>Horário de Atendimento</a></li>
+    </ul>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <form name="settingsSchedule" class="form-horizontal" style="margin-top: 20px" ng-controller="settingsSchedule" ng-init="load()" ng-submit="saveSchedules()">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Domingo</label>
+                    <div class="col-md-6 col-sm-10">
+                        <input id="title" class="form-control" placeholder="Exemplo (08:00-18:00)" ng-model="settings.schedules.sunday">
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Segunda-Feira</label>
+                    <div class="col-md-6 col-sm-10">
+                        <input id="title" class="form-control" placeholder="Exemplo (08:00-18:00)" ng-model="settings.schedules.monday">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Terça-Feira</label>
+                    <div class="col-md-6 col-sm-10">
+                        <input id="title" class="form-control" placeholder="Exemplo (08:00-18:00)" ng-model="settings.schedules.tuesday">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Quarta-Feira</label>
+                    <div class="col-md-6 col-sm-10">
+                        <input id="title" class="form-control" placeholder="Exemplo (08:00-18:00)" ng-model="settings.schedules.wednesday">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Quinta-Feira</label>
+                    <div class="col-md-6 col-sm-10">
+                        <input id="title" class="form-control" placeholder="Exemplo (08:00-18:00)" ng-model="settings.schedules.thusday">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Sexta-Feira</label>
+                    <div class="col-md-6 col-sm-10">
+                        <input id="title" class="form-control" placeholder="Exemplo (08:00-18:00)" ng-model="settings.schedules.friday">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Sábado</label>
+                    <div class="col-md-6 col-sm-10">
+                        <input id="title" class="form-control" placeholder="Exemplo (08:00-18:00)" ng-model="settings.schedules.saturday">
+                    </div>
+                </div>               
+
+                <div class="row" style="margin-top: 20px">
+                    <div class="col-sm-offset-2 col-md-2 col-sm-3 col-xs-6">
+                        <button type="submit" class="btn btn-sm btn-info btn-block">Salvar</button>
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-6">
+                        <a class="btn btn-sm btn-link btn-block " href="#/patientfield">Cancelar</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

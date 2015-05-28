@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4156422-2684-4222-95C2-4B9AE4CBA7E3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Defendeu.Web</RootNamespace>
+    <AssemblyName>Defendeu.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\controllers\associateController.js" />
+    <Content Include="app\controllers\homeController.js" />
+    <Content Include="app\controllers\indexController.js" />
+    <Content Include="app\controllers\loginController.js" />
+    <Content Include="app\controllers\refreshController.js" />
+    <Content Include="app\controllers\signupController.js" />
+    <Content Include="app\controllers\tokensManagerController.js" />
+    <Content Include="app\filters\phoneFilter.js" />
+    <Content Include="app\services\authInterceptorService.js" />
+    <Content Include="app\services\authService.js" />
+    <Content Include="app\services\tokensManagerService.js" />
+    <Content Include="app\views\associate.html" />
+    <Content Include="app\views\home.html" />
+    <Content Include="app\views\login.html" />
+    <Content Include="app\views\refresh.html" />
+    <Content Include="app\views\settings.html" />
+    <Content Include="app\views\signup.html" />
+    <Content Include="app\views\tokens.html" />
+    <Content Include="authComplete.html" />
+    <Content Include="content\css\docs.min.css" />
+    <Content Include="content\css\font-awesome.min.css" />
+    <Content Include="content\css\loading-bar.css" />
+    <Content Include="content\css\loading-bar.min.css" />
+    <Content Include="content\css\pickadate\classic.css" />
+    <Content Include="content\css\pickadate\classic.date.css" />
+    <Content Include="content\css\pickadate\classic.time.css" />
+    <Content Include="content\css\pickadate\default.css" />
+    <Content Include="content\css\pickadate\default.date.css" />
+    <Content Include="content\css\pickadate\default.time.css" />
+    <Content Include="content\css\pickadate\rtl.css" />
+    <Content Include="content\css\site.css" />
+    <Content Include="content\css\social-buttons.css" />
+    <Content Include="content\fonts\fontawesome-webfont.svg" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="content\fonts\fontawesome-webfont.eot" />
+    <Content Include="content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="content\fonts\fontawesome-webfont.woff" />
+    <Content Include="content\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\FileSystem.pubxml" />
+    <None Include="Properties\PublishProfiles\healthweb.pubxml" />
+    <None Include="Properties\PublishProfiles\ngauthenticationweb.pubxml" />
+    <Content Include="content\images\ajax-loader.gif" />
+    <Content Include="scripts\angular-datepicker.js" />
+    <Content Include="scripts\angular-strap.js" />
+    <Content Include="scripts\angular-strap.min.js" />
+    <Content Include="scripts\angular-strap.tpl.js" />
+    <Content Include="scripts\angular-strap.tpl.min.js" />
+    <Content Include="scripts\date-pt-BR.js" />
+    <Content Include="scripts\modules\affix.min.js.map" />
+    <Content Include="scripts\modules\alert.min.js.map" />
+    <Content Include="scripts\modules\aside.min.js.map" />
+    <Content Include="scripts\modules\button.min.js.map" />
+    <Content Include="scripts\modules\collapse.min.js.map" />
+    <Content Include="scripts\modules\date-formatter.min.js.map" />
+    <Content Include="scripts\modules\date-parser.min.js.map" />
+    <Content Include="scripts\modules\datepicker.min.js.map" />
+    <Content Include="scripts\modules\debounce.min.js.map" />
+    <Content Include="scripts\modules\dimensions.min.js.map" />
+    <Content Include="scripts\modules\dropdown.min.js.map" />
+    <Content Include="scripts\modules\modal.min.js.map" />
+    <Content Include="scripts\modules\navbar.min.js.map" />
+    <Content Include="scripts\modules\parse-options.min.js.map" />
+    <Content Include="scripts\modules\popover.min.js.map" />
+    <Content Include="scripts\modules\raf.min.js.map" />
+    <Content Include="scripts\modules\scrollspy.min.js.map" />
+    <Content Include="scripts\modules\select.min.js.map" />
+    <Content Include="scripts\modules\tab.min.js.map" />
+    <Content Include="scripts\modules\timepicker.min.js.map" />
+    <Content Include="scripts\modules\tooltip.min.js.map" />
+    <Content Include="scripts\modules\typeahead.min.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="content\css\bootstrap.min.css" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\images\blackCircle.png" />
+    <Content Include="content\images\blueSchedulerCircle.png" />
+    <Content Include="content\images\email.png" />
+    <Content Include="content\images\greenCircle.png" />
+    <Content Include="content\images\logo.gif" />
+    <Content Include="content\images\phone.png" />
+    <Content Include="content\images\redCircle.png" />
+    <Content Include="content\images\share-icon.ico" />
+    <Content Include="content\images\share-icon.png" />
+    <Content Include="content\pickadate\legacy.js" />
+    <Content Include="content\pickadate\picker.date.js" />
+    <Content Include="content\pickadate\picker.js" />
+    <Content Include="content\pickadate\picker.time.js" />
+    <Content Include="content\pickadate\themes\classic.css" />
+    <Content Include="content\pickadate\themes\classic.date.css" />
+    <Content Include="content\pickadate\themes\classic.time.css" />
+    <Content Include="content\pickadate\themes\default.css" />
+    <Content Include="content\pickadate\themes\default.date.css" />
+    <Content Include="content\pickadate\themes\default.time.css" />
+    <Content Include="content\pickadate\themes\rtl.css" />
+    <Content Include="content\pickadate\translations\ar.js" />
+    <Content Include="content\pickadate\translations\bg_BG.js" />
+    <Content Include="content\pickadate\translations\bs_BA.js" />
+    <Content Include="content\pickadate\translations\ca_ES.js" />
+    <Content Include="content\pickadate\translations\cs_CZ.js" />
+    <Content Include="content\pickadate\translations\da_DK.js" />
+    <Content Include="content\pickadate\translations\de_DE.js" />
+    <Content Include="content\pickadate\translations\el_GR.js" />
+    <Content Include="content\pickadate\translations\es_ES.js" />
+    <Content Include="content\pickadate\translations\et_EE.js" />
+    <Content Include="content\pickadate\translations\eu_ES.js" />
+    <Content Include="content\pickadate\translations\fa_IR.js" />
+    <Content Include="content\pickadate\translations\fi_FI.js" />
+    <Content Include="content\pickadate\translations\fr_FR.js" />
+    <Content Include="content\pickadate\translations\gl_ES.js" />
+    <Content Include="content\pickadate\translations\he_IL.js" />
+    <Content Include="content\pickadate\translations\hi_IN.js" />
+    <Content Include="content\pickadate\translations\hr_HR.js" />
+    <Content Include="content\pickadate\translations\hu_HU.js" />
+    <Content Include="content\pickadate\translations\id_ID.js" />
+    <Content Include="content\pickadate\translations\is_IS.js" />
+    <Content Include="content\pickadate\translations\it_IT.js" />
+    <Content Include="content\pickadate\translations\ja_JP.js" />
+    <Content Include="content\pickadate\translations\ko_KR.js" />
+    <Content Include="content\pickadate\translations\lt_LT.js" />
+    <Content Include="content\pickadate\translations\lv_LV.js" />
+    <Content Include="content\pickadate\translations\nb_NO.js" />
+    <Content Include="content\pickadate\translations\ne_NP.js" />
+    <Content Include="content\pickadate\translations\nl_NL.js" />
+    <Content Include="content\pickadate\translations\no_NO.js" />
+    <Content Include="content\pickadate\translations\pl_PL.js" />
+    <Content Include="content\pickadate\translations\pt_BR.js" />
+    <Content Include="content\pickadate\translations\pt_PT.js" />
+    <Content Include="content\pickadate\translations\ro_RO.js" />
+    <Content Include="content\pickadate\translations\ru_RU.js" />
+    <Content Include="content\pickadate\translations\sk_SK.js" />
+    <Content Include="content\pickadate\translations\sl_SI.js" />
+    <Content Include="content\pickadate\translations\sv_SE.js" />
+    <Content Include="content\pickadate\translations\th_TH.js" />
+    <Content Include="content\pickadate\translations\tr_TR.js" />
+    <Content Include="content\pickadate\translations\uk_UA.js" />
+    <Content Include="content\pickadate\translations\vi_VN.js" />
+    <Content Include="content\pickadate\translations\zh_CN.js" />
+    <Content Include="content\pickadate\translations\zh_TW.js" />
+    <Content Include="index.html" />
+    <Content Include="scripts\angular-local-storage.min.js" />
+    <Content Include="scripts\authComplete.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery.maskedinput.min.js" />
+    <Content Include="scripts\loading-bar.min.js" />
+    <Content Include="scripts\mask.js" />
+    <Content Include="scripts\modules\affix.js" />
+    <Content Include="scripts\modules\affix.min.js" />
+    <Content Include="scripts\modules\alert.js" />
+    <Content Include="scripts\modules\alert.min.js" />
+    <Content Include="scripts\modules\alert.tpl.js" />
+    <Content Include="scripts\modules\alert.tpl.min.js" />
+    <Content Include="scripts\modules\aside.js" />
+    <Content Include="scripts\modules\aside.min.js" />
+    <Content Include="scripts\modules\aside.tpl.js" />
+    <Content Include="scripts\modules\aside.tpl.min.js" />
+    <Content Include="scripts\modules\button.js" />
+    <Content Include="scripts\modules\button.min.js" />
+    <Content Include="scripts\modules\collapse.js" />
+    <Content Include="scripts\modules\collapse.min.js" />
+    <Content Include="scripts\modules\date-formatter.js" />
+    <Content Include="scripts\modules\date-formatter.min.js" />
+    <Content Include="scripts\modules\date-parser.js" />
+    <Content Include="scripts\modules\date-parser.min.js" />
+    <Content Include="scripts\modules\datepicker.js" />
+    <Content Include="scripts\modules\datepicker.min.js" />
+    <Content Include="scripts\modules\datepicker.tpl.js" />
+    <Content Include="scripts\modules\datepicker.tpl.min.js" />
+    <Content Include="scripts\modules\debounce.js" />
+    <Content Include="scripts\modules\debounce.min.js" />
+    <Content Include="scripts\modules\dimensions.js" />
+    <Content Include="scripts\modules\dimensions.min.js" />
+    <Content Include="scripts\modules\dropdown.js" />
+    <Content Include="scripts\modules\dropdown.min.js" />
+    <Content Include="scripts\modules\dropdown.tpl.js" />
+    <Content Include="scripts\modules\dropdown.tpl.min.js" />
+    <Content Include="scripts\modules\modal.js" />
+    <Content Include="scripts\modules\modal.min.js" />
+    <Content Include="scripts\modules\modal.tpl.js" />
+    <Content Include="scripts\modules\modal.tpl.min.js" />
+    <Content Include="scripts\modules\navbar.js" />
+    <Content Include="scripts\modules\navbar.min.js" />
+    <Content Include="scripts\modules\parse-options.js" />
+    <Content Include="scripts\modules\parse-options.min.js" />
+    <Content Include="scripts\modules\popover.js" />
+    <Content Include="scripts\modules\popover.min.js" />
+    <Content Include="scripts\modules\popover.tpl.js" />
+    <Content Include="scripts\modules\popover.tpl.min.js" />
+    <Content Include="scripts\modules\raf.js" />
+    <Content Include="scripts\modules\raf.min.js" />
+    <Content Include="scripts\modules\scrollspy.js" />
+    <Content Include="scripts\modules\scrollspy.min.js" />
+    <Content Include="scripts\modules\select.js" />
+    <Content Include="scripts\modules\select.min.js" />
+    <Content Include="scripts\modules\select.tpl.js" />
+    <Content Include="scripts\modules\select.tpl.min.js" />
+    <Content Include="scripts\modules\tab.js" />
+    <Content Include="scripts\modules\tab.min.js" />
+    <Content Include="scripts\modules\tab.tpl.js" />
+    <Content Include="scripts\modules\tab.tpl.min.js" />
+    <Content Include="scripts\modules\timepicker.js" />
+    <Content Include="scripts\modules\timepicker.min.js" />
+    <Content Include="scripts\modules\timepicker.tpl.js" />
+    <Content Include="scripts\modules\timepicker.tpl.min.js" />
+    <Content Include="scripts\modules\tooltip.js" />
+    <Content Include="scripts\modules\tooltip.min.js" />
+    <Content Include="scripts\modules\tooltip.tpl.js" />
+    <Content Include="scripts\modules\tooltip.tpl.min.js" />
+    <Content Include="scripts\modules\typeahead.js" />
+    <Content Include="scripts\modules\typeahead.min.js" />
+    <Content Include="scripts\modules\typeahead.tpl.js" />
+    <Content Include="scripts\modules\typeahead.tpl.min.js" />
+    <Content Include="scripts\ng-pickadate.js" />
+    <Content Include="scripts\picker.date.js" />
+    <Content Include="scripts\picker.js" />
+    <Content Include="scripts\picker.time.js" />
+    <Content Include="scripts\timeAgo.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>32176</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:32150/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

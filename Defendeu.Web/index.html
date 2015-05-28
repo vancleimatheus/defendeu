@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="pt_BR" data-ng-app="AngularAuthApp">
+<head>
+
+    <meta name="keywords" content="saude, Defendeu, prontuario, compartilhamento, social, share, paciente, doutor, medico, eletronico, melhorar" />
+    <meta name="description" content="Sistema para o acompanhamento de pacientes por profissionais da sáude com foco em melhorar a saúde das pessoas." />
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <title>Defendeu - Melhorando a saúde</title>
+    <link rel="icon" href="content/images/share-icon.ico" type="image/x-icon" />
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/site.css" rel="stylesheet" />
+    <link href="content/css/loading-bar.css" rel="stylesheet" />
+    <link href="content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="content/css/social-buttons.css" rel="stylesheet" />
+    <link href="content/css/docs.min.css" rel="stylesheet" />
+    <link href="content/css/pickadate/default.css" rel="stylesheet" />
+    <link href="content/css/pickadate/default.date.css" rel="stylesheet" />
+    <link href="content/css/pickadate/default.time.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!--[if lt IE 9]>
+        <script>document.createElement('section')</script>
+        <style type="text/css">
+            .holder {
+                position: relative;
+                z-index: 10000;
+            }
+            .datepicker {
+                display: block;
+            }
+        </style>
+    <![endif]-->
+
+</head>
+<body data-ng-controller="indexController">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">Home</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse" data-collapse="false">
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-ng-hide="!authentication.isAuth"><a href="#">Bem vindo {{doctor.name}}</a></li>                    
+                    <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div data-ng-view="">
+        </div>
+    </div>
+
+    <div class="container well">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <span class="text-muted">Defendeu, melhorando a saúde das pessoas!</span>
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+                <span class="glyphicon glyphicon-phone-alt"></span>
+                <span class="text-muted"> (49) 1234-1234</span>
+                <span class="glyphicon glyphicon-envelope"> </span>
+                <a class="text-muted href=" mailto:contao@Defendeu.com" target="_top"> contato@Defendeu.com</a>
+            </div>
+        </div>
+    </div>
+    <!-- 3rd party libraries -->
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
+    <script src="scripts/angular-datepicker.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="scripts/mask.js"></script>
+    <script src="scripts/timeAgo.js"></script>
+    <script src="scripts/date-pt-BR.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="scripts/picker.js"></script>
+    <script src="scripts/picker.date.js"></script>
+    <script src="scripts/picker.time.js"></script>
+    <script src="scripts/ng-pickadate.js"></script>
+
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/loading-bar.min.js"></script>
+    <script type="text/javascript">
+        $(document).on('click', '.navbar-collapse.in', function (e) {
+            if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
+                $(this).collapse('hide');
+            }
+        });
+
+    </script>
+
+    <!-- Load app main script -->
+    <script src="app/app.js?v=2"></script>
+    <!-- Load services -->
+    <script src="app/services/authInterceptorService.js?v=2"></script>
+    <script src="app/services/authService.js?v=2"></script>    
+    <script src="app/services/tokensManagerService.js?v=2"></script>    
+    <!-- Load controllers -->
+    <script src="app/controllers/indexController.js?v=2"></script>
+    <script src="app/controllers/homeController.js?v=2"></script>
+    <script src="app/controllers/loginController.js?v=2"></script>
+    <script src="app/controllers/signupController.js?v=2"></script>    
+    <script src="app/controllers/refreshController.js?v=2"></script>
+    <script src="app/controllers/tokensManagerController.js?v=2"></script>
+    <script src="app/controllers/associateController.js?v=2"></script>    
+    <!-- Load custom filters -->
+    <script src="app/filters/phoneFilter.js?v=2"></script>
+    <!-- Load custom directives -->
+</body>
+</html>
